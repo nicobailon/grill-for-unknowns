@@ -86,8 +86,7 @@ grill-for-unknowns/
         ├── LICENSE
         ├── references/
         │   ├── upstream-lineage.md
-        │   ├── domain-modeling-add-on.md
-        │   └── writing-great-skills-audit.md
+        │   └── domain-modeling-add-on.md
         └── templates/
             ├── ADR.md
             ├── CONTEXT.md
@@ -104,8 +103,6 @@ This skill is substantially inspired by, and should be treated as an adaptation/
   https://github.com/mattpocock/skills/tree/main/skills/engineering/domain-modeling
 - Matt Pocock’s `grilling` skill:  
   https://github.com/mattpocock/skills/blob/main/skills/productivity/grilling/SKILL.md
-- Matt Pocock’s `writing-great-skills` skill-authoring guidance:  
-  https://github.com/mattpocock/skills/tree/main/skills/productivity/writing-great-skills
 
 Additional inspiration comes from Thariq’s X article:
 

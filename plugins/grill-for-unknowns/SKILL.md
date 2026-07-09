@@ -41,7 +41,6 @@ Supporting files:
 - `LICENSE` — MIT license preserving upstream Matt Pocock copyright plus Nico Bailon's adaptation copyright.
 - `references/upstream-lineage.md` — source-skill lineage and how the concepts compose.
 - `references/domain-modeling-add-on.md` — `CONTEXT.md` and ADR rules adapted from `domain-modeling`.
-- `references/writing-great-skills-audit.md` — design audit against Matt Pocock's `writing-great-skills` principles: invocation, leading words, information hierarchy, completion criteria, and pruning.
 - `templates/grill-session.md` — working document for a full grill/unknowns session.
 - `templates/CONTEXT.md` — lightweight glossary template.
 - `templates/ADR.md` — minimal ADR template.

@@ -1,6 +1,6 @@
 # Upstream Lineage: Grill with Docs + Finding Unknowns
 
-This skill adapts three upstream Matt Pocock skills, applies Matt Pocock's `writing-great-skills` authoring principles, and adds Thariq's "Finding Your Unknowns" article strategy into a Hermes workflow.
+This skill adapts three upstream Matt Pocock skills plus Thariq's "Finding Your Unknowns" article into a Hermes workflow.
 
 ## Source skills
 
@@ -20,12 +20,6 @@ This skill adapts three upstream Matt Pocock skills, applies Matt Pocock's `writ
   - Cross-reference claims against code.
   - Update `CONTEXT.md` inline when domain terms crystallize.
   - Offer ADRs only for decisions that are hard to reverse, surprising without context, and the result of a real trade-off.
-- `writing-great-skills`: https://github.com/mattpocock/skills/tree/main/skills/productivity/writing-great-skills
-  - Prefer predictability: same process every run, not identical output.
-  - Use model invocation only when the agent should proactively reach for the skill.
-  - Make the description a compact trigger with distinct branches.
-  - Keep runtime-critical steps inline and disclose reference material behind context pointers.
-  - Use leading words, completion criteria, and pruning to avoid premature completion, duplication, no-ops, negation, sediment, and sprawl.
 
 ## Article strategy being added
 
@@ -52,5 +46,4 @@ The article's concrete tactics are: blindspot passes, brainstorming/prototypes, 
 3. Ground factual claims in docs/source/tests before asking the user.
 4. Use the known/unknown taxonomy to find hidden assumptions before implementation.
 5. Persist crystallized terminology to `CONTEXT.md` and major trade-off decisions to ADRs when appropriate.
-6. Follow `writing-great-skills` design pressure: keep the skill model-invoked because the agent should proactively use it, keep the leading words stable (`map`, `territory`, `unknowns`, `grill`), keep runtime steps inline, move reference into disclosed files, and use checkable completion criteria.
-7. Do not build until the user confirms shared understanding, unless the user explicitly asks to proceed with labeled assumptions.
+6. Do not build until the user confirms shared understanding, unless the user explicitly asks to proceed with labeled assumptions.
