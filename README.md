@@ -29,12 +29,33 @@ The skill asks the agent to separate:
 
 ## Install
 
-### Hermes Agent
-
-Clone the repo and copy the installable skill folder into your Hermes skills directory:
+The skill is a standard `SKILL.md` folder, so installation is the same everywhere: copy `plugins/grill-for-unknowns` into your agent's skills directory. Clone the repo once:
 
 ```bash
 git clone https://github.com/nicobailon/grill-for-unknowns.git /tmp/grill-for-unknowns
+```
+
+### Claude Code
+
+```bash
+mkdir -p ~/.claude/skills
+cp -R /tmp/grill-for-unknowns/plugins/grill-for-unknowns ~/.claude/skills/grill-for-unknowns
+```
+
+Claude Code discovers it automatically; invoke it as `/grill-for-unknowns` or let it trigger from the description. For a project-scoped install, copy into `.claude/skills/` inside the repo instead.
+
+### Codex
+
+```bash
+mkdir -p ~/.agents/skills
+cp -R /tmp/grill-for-unknowns/plugins/grill-for-unknowns ~/.agents/skills/grill-for-unknowns
+```
+
+Codex picks up skills from `~/.agents/skills` (personal) or `.agents/skills` inside a repo (project-scoped); invoke with `$grill-for-unknowns` or let implicit matching select it from the description. See the [Codex skills docs](https://learn.chatgpt.com/docs/build-skills).
+
+### Hermes Agent
+
+```bash
 mkdir -p ~/.hermes/skills/software-development
 cp -R /tmp/grill-for-unknowns/plugins/grill-for-unknowns ~/.hermes/skills/software-development/grill-for-unknowns
 ```
@@ -45,12 +66,9 @@ Then start a fresh Hermes session or reload skills, and load it explicitly when 
 /skill grill-for-unknowns
 ```
 
-### Manual install from this checkout
+### Other agents
 
-```bash
-mkdir -p ~/.hermes/skills/software-development
-cp -R plugins/grill-for-unknowns ~/.hermes/skills/software-development/grill-for-unknowns
-```
+Any agent that supports `SKILL.md` skill folders can use the same copy-the-folder approach.
 
 ## Example prompts
 
@@ -125,4 +143,4 @@ The upstream skills are deliberately minimal and compositional: `grilling` is a 
 
 MIT. See [`LICENSE`](LICENSE).
 
-The upstream `mattpocock/skills` repository is MIT licensed with copyright held by Matt Pocock. Because this skill is an adaptation/fork rather than a totally original work, the license preserves Matt Pocock’s MIT copyright notice and adds Nico Bailon’s copyright notice for the Hermes adaptation.
+The upstream `mattpocock/skills` repository is MIT licensed with copyright held by Matt Pocock. Because this skill is an adaptation/fork rather than a totally original work, the license preserves Matt Pocock’s MIT copyright notice and adds Nico Bailon’s copyright notice for this adaptation.

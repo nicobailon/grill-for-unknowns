@@ -1,6 +1,6 @@
 # grill-for-unknowns
 
-`grill-for-unknowns` is a Hermes skill for getting an agent and user to a shared understanding before complex implementation work begins.
+`grill-for-unknowns` is an agent skill — usable with Hermes, Claude Code, and Codex — for getting an agent and user to a shared understanding before complex implementation work begins.
 
 It combines:
 
@@ -47,7 +47,7 @@ The skill asks the agent to separate:
 
 ## Credits and lineage
 
-This skill is substantially inspired by, and should be treated as a Hermes adaptation/fork of, Matt Pocock’s skill composition around `grill-with-docs`:
+This skill is substantially inspired by, and should be treated as an adaptation/fork of, Matt Pocock’s skill composition around `grill-with-docs`:
 
 - Matt Pocock’s `grill-with-docs` skill:  
   https://github.com/mattpocock/skills/blob/main/skills/engineering/grill-with-docs/SKILL.md
@@ -60,7 +60,7 @@ The core `grill-with-docs` idea is:
 
 > run a grilling session, using domain modeling, so a plan/design is sharpened while shared language and durable decisions are captured.
 
-This skill keeps that lineage and adapts it for Hermes skill folders, templates, implementation launch packets, subagent workflows, and map-vs-territory unknown discovery.
+This skill keeps that lineage and expands it with portable skill-folder packaging, templates, implementation launch packets, subagent workflows, and map-vs-territory unknown discovery.
 
 Additional inspiration comes from Thariq’s X article:
 
@@ -108,6 +108,6 @@ grill-for-unknowns/
 
 ## License and attribution note
 
-This local Hermes skill is a derivative/adaptation inspired by the linked public skills and article. Keep this README with the skill so future edits preserve attribution to Matt Pocock’s original skill design and Thariq’s “Finding Your Unknowns” article.
+This skill is a derivative/adaptation inspired by the linked public skills and article. Keep this README with the skill so future edits preserve attribution to Matt Pocock’s original skill design and Thariq’s “Finding Your Unknowns” article.
 
-The upstream `mattpocock/skills` repository is MIT licensed with copyright held by Matt Pocock. Because this skill is an adaptation/fork rather than a totally original work, the local `LICENSE` file preserves Matt Pocock’s MIT copyright notice and adds Nico Bailon’s 2026 copyright notice for the Hermes adaptation.
+The upstream `mattpocock/skills` repository is MIT licensed with copyright held by Matt Pocock. Because this skill is an adaptation/fork rather than a totally original work, the local `LICENSE` file preserves Matt Pocock’s MIT copyright notice and adds Nico Bailon’s 2026 copyright notice for this adaptation.

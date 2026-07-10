@@ -33,7 +33,7 @@ The goal is not to ask endless questions. The goal is to discover the few answer
 
 ## Lineage and Supporting Files
 
-This skill is a Hermes adaptation of Matt Pocock's `grill-with-docs` composition (`grilling` + `domain-modeling`) plus Thariq's "Finding Your Unknowns" strategy.
+This skill is an adaptation of Matt Pocock's `grill-with-docs` composition (`grilling` + `domain-modeling`) plus Thariq's "Finding Your Unknowns" strategy.
 
 Supporting files:
 

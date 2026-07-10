@@ -1,6 +1,6 @@
 # Upstream Lineage: Grill with Docs + Finding Unknowns
 
-This skill adapts three upstream Matt Pocock skills plus Thariq's "Finding Your Unknowns" article into a Hermes workflow.
+This skill adapts three upstream Matt Pocock skills plus Thariq's "Finding Your Unknowns" article into a single agent skill.
 
 ## Source skills
 
@@ -37,7 +37,7 @@ That gap is classified as:
 
 The article's concrete tactics are: blindspot passes, brainstorming/prototypes, one-question-at-a-time interviews, references/source code as specs, implementation plans, implementation notes, explainers, and quizzes.
 
-## Hermes adaptation
+## This adaptation
 
 `grill-for-unknowns` should therefore behave as a composition skill:
 
