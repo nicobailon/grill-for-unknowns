@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.1.1
+
+Token-efficiency release — three duplication/no-op sweeps of `SKILL.md`, prompted by [@mattpocock](https://github.com/mattpocock)'s feedback that the skill was long, costly in tokens, and hard to review. Thanks Matt.
+
+- Trimmed `SKILL.md` by ~40% — from ~4.7k to ~2.8k tokens (341 → 230 lines) — with all strategy elements from the upstream skills and Thariq's article preserved.
+- Removed skill-authoring guidance that had leaked into runtime instructions (preserved as maintainer notes in `references/upstream-lineage.md`).
+- Moved implementation-notes and launch-packet boilerplate into `templates/`.
+- Deduplicated `CONTEXT.md`/ADR formats (canonical in `templates/`, referenced from the domain-modeling add-on) and the launch packet (canonical in `templates/launch-packet.md`).
+- Added Claude Code and Codex install instructions; de-Hermes'd adaptation wording.
+- Added a five-point upstream comparison to the READMEs.
+
 ## 0.1.0
 
 Initial public release.

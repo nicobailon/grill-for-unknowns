@@ -92,12 +92,4 @@ Only if hard to reverse + surprising without context + real trade-off.
 
 ## Implementation launch packet
 
-Do not fill until shared understanding is confirmed.
-
-- Goal:
-- Stable plan:
-- Territory to inspect during implementation:
-- Stop-and-ask conditions:
-- Continue-and-log conditions:
-- Implementation notes path:
-- Verification gates:
+Do not fill until shared understanding is confirmed. Use `launch-packet.md` from this templates folder.

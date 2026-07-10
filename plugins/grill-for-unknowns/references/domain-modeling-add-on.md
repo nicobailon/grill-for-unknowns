@@ -43,21 +43,7 @@ Do not add generic programming concepts just because the project uses them.
 
 ## CONTEXT.md format
 
-```md
-# {Context Name}
-
-{One or two sentence description of what this context is and why it exists.}
-
-## Language
-
-**Order**:
-{A one or two sentence description of the term}
-_Avoid_: Purchase, transaction
-
-**Invoice**:
-A request for payment sent to a customer after delivery.
-_Avoid_: Bill, payment request
-```
+Use `../templates/CONTEXT.md` as the skeleton.
 
 Rules:
 
@@ -96,19 +82,7 @@ docs/adr/0001-short-slug.md
 docs/adr/0002-next-decision.md
 ```
 
-Minimal ADR:
-
-```md
-# {Short title of the decision}
-
-{1-3 sentences: what's the context, what did we decide, and why.}
-```
-
-Optional sections only when they add value:
-
-- Status: proposed / accepted / deprecated / superseded
-- Considered Options
-- Consequences
+Use `../templates/ADR.md` as the skeleton: a short title plus 1-3 sentences (context, decision, why), with Status / Considered Options / Consequences sections only when they add value.
 
 ## What qualifies for ADRs
 
