@@ -1,6 +1,6 @@
 {
   "name": "grill-for-unknowns",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Agent skill for docs-grounded grilling, unknown discovery, and shared understanding before implementation",
   "license": "MIT",
   "homepage": "https://github.com/nicobailon/grill-for-unknowns#readme",
