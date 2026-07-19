@@ -1,7 +1,7 @@
 ---
 name: grill-for-unknowns
 description: Use when starting or reviewing a complex implementation where the user wants an agent to interrogate the plan against docs/source evidence, surface unknown unknowns, and avoid rushing into build mode. Combines docs-grounded grilling with a map-vs-territory unknowns pass.
-version: 0.1.1
+version: 0.1.2
 author: Nico Bailon (co-authored by Matt Pocock)
 license: MIT
 metadata:
@@ -22,7 +22,7 @@ The core idea is:
 
 This skill combines docs-grounded grilling, one-question-at-a-time interviewing, domain modeling, and a four-quadrant unknowns pass.
 
-The goal is not to ask endless questions. The goal is to discover the few answers that would materially change the plan (see the **Material** criterion below) — and to write down the shared understanding as it forms.
+Grilling here means few, evidence-priced questions — not relentless interrogation; not asking about a non-material topic is correct behavior. The goal is to discover the few answers that would materially change the plan (see the **Material** criterion below) — and to write down the shared understanding as it forms.
 
 ## When to Use
 
@@ -44,6 +44,8 @@ Do **not** use when:
 ## Operating Mode
 
 Stay in **Explore** or **Plan** mode until the unknowns that could change the implementation are resolved or explicitly accepted as assumptions.
+
+The grill has a defined end: it is over when the unknowns ledger is empty — every material unknown resolved, defaulted, or explicitly accepted. Announce the remaining count as it shrinks (e.g., "2 material unknowns left") so the user can see the end approaching.
 
 Default sequence:
 
@@ -115,6 +117,12 @@ If you don't care: I'll proceed with <default>.
 ```
 
 If multiple questions are useful but not blocking, keep them in the grill queue and ask the next unresolved material decision first.
+
+Budget and exit rules:
+
+- Default budget: ~5 blocking questions per session. Going beyond it requires asking the user whether to continue.
+- **Fatigue valve**: if the user's answers turn short or impatient (one-word replies, "just pick"), stop interviewing — convert the remaining unknowns to labeled defaults and present them as one batch for veto.
+- Once no blocking questions remain, do not keep asking one at a time: present the residual low-risk unknowns as a single assumptions list for veto.
 
 ## Domain Modeling: Shared Language and ADRs
 
