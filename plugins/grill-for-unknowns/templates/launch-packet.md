@@ -40,3 +40,4 @@
 ## Verification gates
 
 - <commands/tests/manual checks>
+- <rubric criteria for subjective outputs, distilled from user reactions>

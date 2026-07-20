@@ -100,6 +100,7 @@ Bad grill questions:
 - Obvious preferences that a competent agent can default.
 - Exhaustive questionnaires before any research.
 - Asking the user to answer things the code/docs can answer.
+- Asking the user to verbalize taste they can only recognize when shown ("what does modern mean to you?") — route those to prototypes and references instead.
 - Open-ended "anything else?" questions with no context.
 
 ### 3. Ask one material question at a time when blocked
@@ -132,7 +133,7 @@ Offer an ADR only when the decision is (1) hard to reverse, (2) surprising witho
 
 ## Finding Unknown Unknowns: Blindspot Pass
 
-Run a blindspot pass when the user is entering an unfamiliar domain, unfamiliar part of the codebase, or high-stakes integration: search the relevant docs/source/tests for unknown unknowns that could materially change the plan, explain them in plain language, rank by implementation risk, and suggest how to resolve each one cheaply.
+Run a blindspot pass when the user is entering an unfamiliar domain, unfamiliar part of the codebase, or high-stakes integration: search the relevant docs/source/tests — including documented limits and known failure modes of load-bearing dependencies — for unknown unknowns that could materially change the plan, explain them in plain language, rank by implementation risk, and suggest how to resolve each one cheaply.
 
 Output shape:
 
@@ -160,7 +161,7 @@ When the user will recognize the right answer visually or behaviorally but canno
 - Build cheap prototypes before wiring real systems — e.g., a single-file mock with fake data showing 3 distinct directions.
 - Offer multiple directions with meaningful contrast, not tiny variations.
 - Ask the user to react to examples, screenshots, demos, or reference source — e.g., 2-3 similar in-repo modules plus one external reference, then ask which behavior to match.
-- Capture the user's reactions as explicit criteria.
+- Capture the user's reactions as explicit criteria — and when quality can't be checked by a test, distill them into a short rubric that becomes the verification gate.
 
 ## Implementation Plan Requirements
 

@@ -9,6 +9,9 @@ Anti-exhaustion release — addresses the failure mode where "grilling" primes a
 - Added a default budget of ~5 blocking questions per session; exceeding it requires user opt-in.
 - Added a fatigue valve: short or impatient answers switch the agent to defaults mode — remaining unknowns become one batched assumptions list for veto.
 - Added a batched endgame: residual low-risk unknowns are presented as a single assumptions list instead of serial questions.
+- Added a bad-question guard: asking the user to verbalize taste they can only recognize when shown is banned — those unknowns route to prototypes and references instead.
+- Made subjective verification concrete: captured user reactions distill into a short rubric that serves as the verification gate when no test can.
+- Pointed the blindspot pass explicitly at documented limits and known failure modes of load-bearing dependencies.
 
 ## 0.1.1
 
