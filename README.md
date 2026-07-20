@@ -29,38 +29,51 @@ The skill asks the agent to separate:
 
 ## Install
 
-The skill is a standard `SKILL.md` folder, so installation is the same everywhere: copy `plugins/grill-for-unknowns` into your agent's skills directory. Clone the repo once:
+### Claude Code (recommended: plugin marketplace)
+
+```txt
+/plugin marketplace add nicobailon/grill-for-unknowns
+/plugin install grill-for-unknowns@grill-for-unknowns-marketplace
+```
+
+Invoke it as `/grill-for-unknowns` or let it trigger from the description. Update later with:
+
+```txt
+/plugin update grill-for-unknowns
+```
+
+Prefer a manual install? Copy the folder instead:
 
 ```bash
 git clone https://github.com/nicobailon/grill-for-unknowns.git /tmp/grill-for-unknowns
-```
-
-### Claude Code
-
-```bash
 mkdir -p ~/.claude/skills
 cp -R /tmp/grill-for-unknowns/plugins/grill-for-unknowns ~/.claude/skills/grill-for-unknowns
 ```
 
-Claude Code discovers it automatically; invoke it as `/grill-for-unknowns` or let it trigger from the description. For a project-scoped install, copy into `.claude/skills/` inside the repo instead.
+For a project-scoped install, copy into `.claude/skills/` inside the repo instead.
 
-### Codex
+### Codex and Hermes (recommended: clone + symlink)
+
+Clone once to a stable location, then symlink into each agent's skills directory — updating every agent later is a single `git pull`:
 
 ```bash
+git clone https://github.com/nicobailon/grill-for-unknowns.git ~/.local/share/grill-for-unknowns
+SKILL_SRC=~/.local/share/grill-for-unknowns/plugins/grill-for-unknowns
+
+# Codex
 mkdir -p ~/.agents/skills
-cp -R /tmp/grill-for-unknowns/plugins/grill-for-unknowns ~/.agents/skills/grill-for-unknowns
+ln -s "$SKILL_SRC" ~/.agents/skills/grill-for-unknowns
+
+# Hermes
+mkdir -p ~/.hermes/skills/software-development
+ln -s "$SKILL_SRC" ~/.hermes/skills/software-development/grill-for-unknowns
 ```
+
+If you prefer a plain copy, replace `ln -s` with `cp -R` (and re-copy to update).
 
 Codex picks up skills from `~/.agents/skills` (personal) or `.agents/skills` inside a repo (project-scoped); invoke with `$grill-for-unknowns` or let implicit matching select it from the description. See the [Codex skills docs](https://learn.chatgpt.com/docs/build-skills).
 
-### Hermes Agent
-
-```bash
-mkdir -p ~/.hermes/skills/software-development
-cp -R /tmp/grill-for-unknowns/plugins/grill-for-unknowns ~/.hermes/skills/software-development/grill-for-unknowns
-```
-
-Then start a fresh Hermes session or reload skills, and load it explicitly when needed:
+For Hermes, start a fresh session or reload skills, then load it explicitly when needed:
 
 ```txt
 /skill grill-for-unknowns
@@ -68,7 +81,15 @@ Then start a fresh Hermes session or reload skills, and load it explicitly when 
 
 ### Other agents
 
-Any agent that supports `SKILL.md` skill folders can use the same copy-the-folder approach.
+Any agent that supports `SKILL.md` skill folders can use the same clone-and-symlink (or copy-the-folder) approach.
+
+## Updating
+
+- **Claude Code (marketplace install)** — `/plugin update grill-for-unknowns`, then restart the session.
+- **Symlink installs** — `git -C ~/.local/share/grill-for-unknowns pull` updates every symlinked agent at once.
+- **Copied installs** — re-run the copy command from the install section.
+
+Releases are tagged and listed at [Releases](https://github.com/nicobailon/grill-for-unknowns/releases); see [`CHANGELOG.md`](CHANGELOG.md) for what changed.
 
 ## Example prompts
 
@@ -97,11 +118,15 @@ grill-for-unknowns/
 ├── LICENSE
 ├── NOTICE.md
 ├── package.json
+├── .claude-plugin/
+│   └── marketplace.json
 └── plugins/
     └── grill-for-unknowns/
         ├── SKILL.md
         ├── README.md
         ├── LICENSE
+        ├── .claude-plugin/
+        │   └── plugin.json
         ├── references/
         │   ├── upstream-lineage.md
         │   └── domain-modeling-add-on.md

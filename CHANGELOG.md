@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.1.3
+
+Distribution release — one-command installs and updates for Claude Code, and a `git pull` update path for every other agent.
+
+- Added Claude Code plugin-marketplace manifests (`.claude-plugin/marketplace.json` and `plugin.json`), so the skill installs via `/plugin marketplace add nicobailon/grill-for-unknowns` and updates via `/plugin update grill-for-unknowns`.
+- Reworked the README install instructions around clone-and-symlink for Codex and Hermes: one clone serves every agent, and updating all of them is a single `git pull`.
+- Added an Updating section to the README covering all three install styles.
+
+No skill-behavior changes.
+
 ## 0.1.2
 
 Anti-exhaustion release — addresses the failure mode where "grilling" primes an agent to over-question to the point of user exhaustion. The exhaustion controls now live in the skill instead of relying on user discipline.

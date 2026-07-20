@@ -1,7 +1,7 @@
 ---
 name: grill-for-unknowns
 description: Use when starting or reviewing a complex implementation where the user wants an agent to interrogate the plan against docs/source evidence, surface unknown unknowns, and avoid rushing into build mode. Combines docs-grounded grilling with a map-vs-territory unknowns pass.
-version: 0.1.2
+version: 0.1.3
 author: Nico Bailon (co-authored by Matt Pocock)
 license: MIT
 metadata:
